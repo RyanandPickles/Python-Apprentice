@@ -68,7 +68,7 @@ tina.penup()                            # Lift the pen up so we can move tina wi
 tina.goto(-50, -150)
 tina.forward(20)                        # Move tina forward by 20
 tina.left(90)                           # Turn tina left by 90 degrees
-tina.forward(20)                        # Move tina forward by 20
+tina.forward(30)                        # Move tina forward by 20
 tina.write("Why, hello there!")         # Write the message "Why, hello there!"
 tina.backward(20)                       # Move tina backward by 20
 
