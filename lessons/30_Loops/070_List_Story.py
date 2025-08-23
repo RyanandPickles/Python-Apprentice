@@ -11,6 +11,8 @@ words = ['Once', '👦', 'upon', '🐕', 'park', 'met', 'with', 'a', 'the',
 
 story = []
 
+story.append(words[1])
+
 # Create a story using the words in the list
 
 # Display the story to the user
