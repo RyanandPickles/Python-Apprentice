@@ -32,14 +32,26 @@ from guizero import App, Box, Text
 app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
-# Or you can use a single loop and calculate the row and column
+for i in range(10):
+    for j in range(10):
+        number=10*i+j+1
+        col=j
+        row=i
+        print(f"{10*i+j+1}", end = " ")
+        if number % 15 == 0:
+            Text(app, text='🐍', grid=[col, row])
+        elif number % 5 == 0:
+            Text(app, text='🦡', grid=[col, row])
+        elif number % 3 == 0: 
+            Text(app, text='🍄', grid=[col, row])
+        else:
+            x=number // 10
+            y=number % 10
+            if (x+y) % 2 == 0:
+                Text(app, text=str(number), grid=[col, row], color='blue')
+            elif (x+y) % 2 == 1:
+                Text(app, text=str(number), grid=[col, row], color='red')
+    print()
 
-# In the loop, calculate or increment the number
-
-# Use % determing the display, using fizzbuzz rules
-
-# If you are displaying a number, calculate the sum of the digits and determine the color
-
-# Call Text(app, text='...', grid=[col, row], color=...) to display something. 
-
+        
 app.display()
